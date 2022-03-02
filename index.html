@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="./css/styles.css">
+
+  <title>Frontend Mentor | Time tracking dashboard</title>
+
+</head>
+
+<body>
+
+  <main class="container grid">
+    <div class="activity__report">
+      <section class="activity__report--header">
+        <img src="./images/image-jeremy.png" alt="">
+        <p class="report">Report for</p>
+        <h1 class="title">Jeremy Robson</h1>
+      </section>
+      <ul class="activity__report--tabs">
+        <li class="activity__report--tab daily">Daily</li>
+        <li class="activity__report--tab weekly active">Weekly</li>
+        <li class="activity__report--tab monthly">Monthly</li>
+      </ul>
+    </div>
+
+    <section class="activity__card work">
+      <div class="activity__stats">
+        <section class="activity__stats--header">
+          <h3 class="title">Work</h3>
+          <button class="activity__stats--btn"><img src="./images/icon-ellipsis.svg" alt=""></button>
+        </section>
+        <section class="activity__stats--content daily">
+          <!-- daily -->
+          <h2 class="title">5hrs</h2>
+          <p class="previous">Last Week - 7hrs</p>
+        </section>
+
+        <section class="activity__stats--content weekly active">
+          <!-- weekly -->
+          <h2 class="title">32hrs</h2>
+          <p class="previous">Last Week - 36hrs</p>
+        </section>
+
+        <section class="activity__stats--content monthly">
+          <!-- monthly -->
+          <h2 class="title">103hrs</h2>
+          <p class="previous">Last Week - 128hrs</p>
+        </section>
+      </div>
+    </section>
+
+    <section class="activity__card play">
+      <div class="activity__stats">
+        <section class="activity__stats--header">
+          <h3 class="title">Play</h3>
+          <button class="activity__stats--btn"><img src="./images/icon-ellipsis.svg" alt=""></button>
+        </section>
+        <section class="activity__stats--content daily">
+          <!-- daily -->
+          <h2 class="title">1hr</h2>
+          <p class="previous">Last Week - 2hrs</p>
+        </section>
+        <section class="activity__stats--content weekly active">
+          <!-- weekly -->
+          <h2 class="title">10hrs</h2>
+          <p class="previous">Last Week - 8hrs</p>
+        </section>
+        <section class="activity__stats--content monthly">
+          <!-- monthly -->
+          <h2 class="title">23hrs</h2>
+          <p class="previous">Last Week - 29hrs</p>
+        </section>
+      </div>
+    </section>
+
+    <section class="activity__card study">
+      <div class="activity__stats">
+        <section class="activity__stats--header">
+          <h3 class="title">Study</h3>
+          <button class="activity__stats--btn"><img src="./images/icon-ellipsis.svg" alt=""></button>
+        </section>
+        <section class="activity__stats--content daily">
+          <!-- daily -->
+          <h2 class="title">0hrs</h2>
+          <p class="previous">Last Week - 1hr</p>
+        </section>
+        <section class="activity__stats--content weekly active">
+          <!-- weekly -->
+          <h2 class="title">4hrs</h2>
+          <p class="previous">Last Week - 7hrs</p>
+        </section>
+        <section class="activity__stats--content monthly">
+          <!-- monthly -->
+          <h2 class="title">13hrs</h2>
+          <p class="previous">Last Week - 19hrs</p>
+        </section>
+      </div>
+    </section>
+
+    <section class="activity__card exercise">
+      <div class="activity__stats">
+        <section class="activity__stats--header">
+          <h3 class="title">Exercise</h3>
+          <button class="activity__stats--btn"><img src="./images/icon-ellipsis.svg" alt=""></button>
+        </section>
+        <section class="activity__stats--content daily">
+          <!-- daily -->
+          <h2 class="title">1hr</h2>
+          <p class="previous">Last Week - 1hr</p>
+        </section>
+        <section class="activity__stats--content weekly active">
+          <!-- weekly -->
+          <h2 class="title">4hrs</h2>
+          <p class="previous">Last Week - 5hrs</p>
+        </section>
+        <section class="activity__stats--content monthly">
+          <!-- monthly -->
+          <h2 class="title">11hrs</h2>
+          <p class="previous">Last Week - 18hrs</p>
+        </section>
+      </div>
+    </section>
+
+    <section class="activity__card social">
+      <div class="activity__stats">
+        <section class="activity__stats--header">
+          <h3 class="title">Social</h3>
+          <button class="activity__stats--btn"><img src="./images/icon-ellipsis.svg" alt=""></button>
+        </section>
+        <section class="activity__stats--content daily">
+          <!-- daily -->
+          <h2 class="title">1hr</h2>
+          <p class="previous">Last Week - 3hrs</p>
+        </section>
+        <section class="activity__stats--content weekly active">
+          <!-- weekly -->
+          <h2 class="title">5hrs</h2>
+          <p class="previous">Last Week - 10hrs</p>
+        </section>
+        <section class="activity__stats--content monthly">
+          <!-- monthly -->
+          <h2 class="title">21hrs</h2>
+          <p class="previous">Last Week - 23hrs</p>
+        </section>
+      </div>
+    </section>
+
+    <section class="activity__card self-care">
+      <div class="activity__stats">
+        <section class="activity__stats--header">
+          <h3 class="title">Self Care</h3>
+          <button class="activity__stats--btn"><img src="./images/icon-ellipsis.svg" alt=""></button>
+        </section>
+        <section class="activity__stats--content daily">
+          <!-- daily -->
+          <h2 class="title">0hrs</h2>
+          <p class="previous">Last Week - 1hr</p>
+        </section>
+        <section class="activity__stats--content weekly active">
+          <!-- weekly -->
+          <h2 class="title">2hrs</h2>
+          <p class="previous">Last Week - 2hrs</p>
+        </section>
+        <section class="activity__stats--content monthly">
+          <!-- monthly -->
+          <h2 class="title">7hrs</h2>
+          <p class="previous">Last Week - 11hrs</p>
+        </section>
+      </div>
+    </section>
+  </main>
+
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+    Coded by <a href="#">Kellen Ruyle</a>.
+  </div>
+
+  <script src="app.js"></script>
+
+</body>
+
+</html>

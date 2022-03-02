@@ -1,0 +1,427 @@
+:root {
+  /* ### Colors ### */
+
+  /* ## Primary ## */
+
+  --blue: hsl(246, 80%, 60%);
+
+  /* (work) */
+  --orange-red: hsl(15, 100%, 70%);
+  /* (play) */
+  --soft-blue: hsl(195, 74%, 62%);
+  /* (study) */
+  --light-red: hsl(348, 100%, 68%);
+  /* (exercise) */
+  --lime-green: hsl(145, 58%, 55%);
+  /* (social) */
+  --violet: hsl(264, 64%, 52%);
+  /* (self care) */
+  --soft-orange: hsl(43, 84%, 65%);
+
+  /* ## Neutral ## */
+  --very-dark-blue: hsl(226, 43%, 10%);
+  --dark-blue: hsl(235, 46%, 20%);
+  --desaturated-blue: hsl(235, 45%, 61%);
+  --pale-blue: hsl(236, 100%, 87%);
+  --white: hsl(0, 100%, 100%);
+
+  /* ### Typography ### */
+
+  /* ## Body Copy ## */
+
+  /* (card titles e.g. Work, Play) */
+  --fs-body: 1.125rem;
+
+  /* ### font family ###  */
+  --ff-primary: 'Rubik', sans-serif;
+}
+
+/* reset  */
+
+html {
+  box-sizing: border-box;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica,
+    Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
+  font-size: 100%;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  position: relative;
+  background-color: var(--very-dark-blue);
+  color: var(--white);
+  font-size: var(--fs-body);
+  font-weight: 400;
+  line-height: 1.63em;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+img {
+  max-width: 100%;
+}
+
+ul[class] {
+  list-style: none;
+}
+
+button,
+input[type='submit'],
+input[type='reset'] {
+  display: inline-flex;
+  background: none;
+  color: inherit;
+  border: none;
+  padding: 0;
+  font: inherit;
+  cursor: pointer;
+  outline: inherit;
+}
+
+/*Note: If removing all styling from a button, may be a good idea to set it to display inline-block .
+*/
+
+main {
+  padding: 5em 0 5em;
+}
+
+main > * {
+  margin-bottom: 1.5em;
+}
+
+.container {
+  width: 90%;
+  max-width: 69.375rem;
+  margin: 0 auto;
+}
+
+.work {
+  --bg: var(--orange-red);
+}
+.play {
+  --bg: var(--soft-blue);
+}
+.study {
+  --bg: var(--light-red);
+}
+.exercise {
+  --bg: var(--lime-green);
+}
+.social {
+  --bg: var(--violet);
+}
+.self-care {
+  --bg: var(--soft-orange);
+}
+
+.activity__card {
+  background-color: var(--bg, var(--blue));
+}
+
+/* ***** activity report ***** */
+
+.activity__report {
+  background-color: var(--dark-blue);
+  border-radius: 0.9375rem;
+}
+
+.activity__report--header {
+  background-color: var(--blue);
+  padding: 2.1875rem 2rem 2.125rem;
+  border-radius: 0.9375rem;
+
+  display: grid;
+  grid-template-columns: minmax(auto, 4rem) minmax(auto, 10.75rem);
+  grid-template-areas: 'image report' 'image report';
+  justify-content: center;
+  align-items: flex-start;
+  grid-gap: 0 1.25em;
+}
+
+.activity__report--header img {
+  width: 4rem;
+  grid-area: image;
+  justify-self: start;
+  border-radius: 50%;
+  border: 3px solid var(--white);
+  box-shadow: 0 4px 4px hsla(0, 0%, 0%, 0.25);
+}
+
+.activity__report--header .report {
+  color: var(--pale-blue);
+  font-size: 0.9375rem;
+}
+.activity__report--header .title {
+  font-size: 1.5rem;
+  font-weight: 300;
+}
+
+.activity__report--tabs {
+  display: flex;
+  color: var(--desaturated-blue);
+  flex-direction: row;
+  justify-content: space-between;
+  font-size: 1.125rem;
+  font-weight: 400;
+  padding: 1.5rem 2rem 1.5625rem;
+}
+
+.activity__report--tab {
+  cursor: pointer;
+  transition: color 0.25s ease-in;
+}
+
+.activity__report--tab:hover,
+.activity__report--tab:active {
+  color: var(--white);
+}
+
+.activity__report--tab.active {
+  color: var(--white);
+}
+
+/* ***** activity cards ***** */
+
+.activity__card {
+  position: relative;
+  padding-top: 2.0625rem;
+  border-radius: 0.9375rem;
+}
+
+.activity__card::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-repeat: no-repeat;
+  background-position: top right 5%;
+}
+
+.work::before {
+  background-image: url('../images/icon-work.svg');
+}
+
+.play::before {
+  background-image: url('../images/icon-play.svg');
+}
+
+.study::before {
+  background-image: url('../images/icon-study.svg');
+}
+
+.exercise::before {
+  background-image: url('../images/icon-exercise.svg');
+}
+
+.social::before {
+  background-image: url('../images/icon-social.svg');
+}
+
+.self-care::before {
+  background-image: url('../images/icon-self-care.svg');
+}
+
+/***** activity stats  *****/
+
+.activity__stats {
+  position: relative;
+  background-color: var(--dark-blue);
+  border-radius: 0.9375rem;
+  padding: 1.75rem 1.5rem;
+  z-index: 1;
+}
+
+.activity__stats--header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+  font-size: 1.125rem;
+  margin-bottom: 0.375rem;
+}
+
+.activity__stats--header .title {
+  font-size: 1.125rem;
+  font-weight: 500;
+  position: relative;
+  top: 30%;
+  transform: translateY(-30%);
+}
+
+.activity__stats--btn {
+  transition: filter 0.25s ease-out;
+}
+
+.activity__stats--btn:hover,
+.activity__stats--btn:active {
+  filter: brightness(0) invert(1);
+}
+
+.activity__stats--content {
+  display: none;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.activity__stats--content.active {
+  display: flex;
+}
+
+.activity__stats--content .title {
+  vertical-align: top;
+  font-size: 2rem;
+  font-weight: 300;
+}
+
+.activity__stats--content .previous {
+  color: var(--pale-blue);
+  font-size: 0.9375rem;
+  font-weight: 400;
+}
+
+.attribution {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  font-size: 11px;
+  text-align: center;
+}
+
+.attribution a {
+  color: var(--soft-orange);
+}
+
+@media (min-width: 50em) {
+  main > * {
+    margin-bottom: 0;
+  }
+
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(4, min-content);
+    justify-content: center;
+    gap: 1rem 1rem;
+  }
+
+  .activity__report--header {
+    background-color: var(--blue);
+    border-radius: 0.9375rem;
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .activity__report--header img {
+    margin-bottom: 2.6875rem;
+  }
+
+  .activity__report {
+    grid-column: 1;
+    grid-row: 1 / span 2;
+  }
+
+  .activity__card {
+    width: 100%;
+  }
+}
+
+@media (min-width: 62em) {
+  main > * {
+    margin-bottom: 0;
+  }
+
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(auto, 15.9375em));
+    grid-template-rows: repeat(2, minmax(auto, 15.9375em));
+    grid-template-areas: 'report activities activities activities' 'report activities activities activities';
+    justify-content: center;
+    align-items: center;
+    gap: 1.875rem 1.875rem;
+  }
+
+  .activity__report {
+    grid-area: report;
+    max-width: 15.9375rem;
+  }
+
+  .activity__report--header {
+    background-color: var(--blue);
+    padding: 2.3125rem 2rem 5rem;
+    border-radius: 0.9375rem;
+  }
+
+  .activity__report--header img {
+    margin-bottom: 2.6875rem;
+  }
+
+  .activity__report--tabs {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    font-size: 0.9375rem;
+    padding: 1.625rem 2rem 2rem;
+  }
+
+  .activity__report--tab + .activity__report--tab {
+    margin-top: 1.3125rem;
+  }
+
+  .activity__card {
+    align-self: flex-start;
+    max-width: 15.9375rem;
+    padding-top: 2.8125rem;
+  }
+
+  .work,
+  .play,
+  .activity,
+  .study {
+    align-self: flex-end;
+  }
+
+  .activity__stats {
+    cursor: pointer;
+    padding: 1.8125rem 1.875rem 2rem;
+    transition: background-color 0.25s ease-in;
+  }
+
+  .activity__stats--content {
+    flex-direction: column;
+    justify-content: left;
+    align-items: flex-start;
+  }
+
+  .activity__stats:hover,
+  .activity__stats:active {
+    background-color: hsla(236, 41%, 34%, 1);
+  }
+
+  .activity__stats--header {
+    margin-bottom: 1.5625rem;
+  }
+
+  .activity__report--header .title {
+    font-size: 2.5rem;
+    line-height: 1;
+    font-weight: 300;
+  }
+
+  .activity__stats--content .title {
+    font-size: 3.5rem;
+    margin-bottom: 1.5rem;
+  }
+}
