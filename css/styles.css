@@ -343,7 +343,7 @@ img {
 
 @media (min-width: 40em) {
     .activity-card--report {
-        grid-column: 1 /  -1;
+        grid-column: 1 / -1;
     }
 
     .activity-card__content .column {
@@ -446,6 +446,10 @@ img {
 
     .activity-card__content .bottom-spacing {
         margin-bottom: 1.5rem;
+    }
+
+    .activity-card__content .margin-bottom {
+        margin-bottom:0.5rem;
     }
 
     .menus {

@@ -92,7 +92,7 @@ function renderActivityCard(element, timeframe) {
           </div>
         </div>
         <div class="flex column">
-          <h3 class="fs-heading-l current-timeframe">${currentTimeframe}hrs</h3>
+          <h3 class="fs-heading-l margin-bottom current-timeframe">${currentTimeframe}hrs</h3>
           <p class="timeframe-text">${timeframeText[timeframe]} - ${previousTimeframe}hrs</p>
         </div>
       </div>
