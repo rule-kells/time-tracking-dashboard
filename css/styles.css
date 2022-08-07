@@ -142,7 +142,7 @@ img {
     color: var(--white);
     font-size: var(--fs-heading-l);
     font-weight: var(--fw-300);
-    line-height: 1.1;
+    line-height: 1;
 }
 
 .fs-heading-m {
